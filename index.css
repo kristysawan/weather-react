@@ -1,0 +1,146 @@
+:root {
+  --pink: #f69eab;
+  --pink-dark: #f0506d;
+  --pink-light: #fff0f3;
+  --text: #5a4a4d;
+  --danger: #e0607e;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 32px;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  margin: 0;
+  padding: var(--sp-5) var(--sp-3);
+  background: linear-gradient(180deg, #ffe3ea 0%, var(--pink-light) 100%);
+}
+
+.card {
+  max-width: 420px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(255, 143, 163, 0.25);
+  padding: var(--sp-4);
+}
+
+header h1 {
+  text-align: center;
+  color: var(--pink-dark);
+  margin-top: 0;
+  margin-bottom: var(--sp-4);
+}
+
+/* SearchBar */
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 150px;
+  padding: var(--sp-2);
+  font-size: 16px;
+  border: 2px solid var(--pink);
+  border-radius: 6px;
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: var(--pink-dark);
+}
+
+.search-form button {
+  padding: var(--sp-2) var(--sp-3);
+  font-size: 16px;
+  cursor: pointer;
+  background: var(--pink);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background 180ms ease-out;
+}
+
+.search-form button:hover {
+  background: var(--pink-dark);
+}
+
+.search-form button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* LoadingMessage */
+.loading {
+  text-align: center;
+  color: var(--pink-dark);
+  font-weight: bold;
+}
+
+/* ErrorMessage */
+.error {
+  color: var(--danger);
+  background: var(--pink-light);
+  border-left: 4px solid var(--danger);
+  border-radius: 8px;
+  padding: var(--sp-2) var(--sp-3);
+  text-align: center;
+}
+
+/* WeatherCard */
+.weather-card {
+  text-align: center;
+}
+
+.weather-card h2 {
+  margin: 0;
+  color: var(--pink-dark);
+}
+
+.main-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+}
+
+.temp {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.description {
+  margin: 0 0 var(--sp-3);
+  font-size: 18px;
+}
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-2);
+}
+
+.details li {
+  background: var(--pink-light);
+  border-left: 4px solid var(--pink);
+  border-radius: 8px;
+  padding: var(--sp-2) var(--sp-3);
+}
